@@ -4,7 +4,7 @@ import axios from 'axios';
 const Weather = () => {
     const [weatherData, setWeatherData] = useState(null);
     const API_KEY = '68e1864303dae3362322d5ee63e92950';
-    const location = 'Belgaum';
+    const location = 'Pune';
 
     useEffect(() => {
         const fetchWeatherData = async () => {
@@ -27,7 +27,7 @@ const Weather = () => {
 
     return (
         <div>
-            <h2>{location}</h2>
+            <h2>Your Current Location:{location}</h2>
             <p>Temperature: {weatherData.main.temp}</p>
             <p>Humidity: {weatherData.main.humidity}</p>
             <p>Air Quality: {weatherData.airQuality}</p>
